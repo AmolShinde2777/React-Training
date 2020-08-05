@@ -1,0 +1,130 @@
+All Topics:
+
+Day 1 - Refreshing Next Generation JavaScript – ES6
+
+•	Class
+•	Spread and Rest operator
+•	Arrow functions
+•	Array functions – Map, filter
+•	Let vs Const vs Var
+•	Exports and Imports
+•	Destructuring
+•	Reference and primitive types
+
+//Arrow Functions
+let add = (x, y) => console.log(x + y);
+new add(2,3);
+
+var person = {
+  name: 'Amol',
+  displayName: function () {
+    return function() {
+      console.log(this.name);
+    }
+  }
+}
+
+var aa = person.displayName();
+aa();
+
+var person = {
+  name: 'Amol',
+  displayName: function () {
+    return getName = () => { 
+      console.log(this.name)
+    };
+  }
+}
+
+var aa = person.displayName();
+aa();
+--------------------------------------------------------------------------------
+//Spread Opearator - Used to split up array elements OR Object properties
+	//Array
+	const numbers = [1,2,3]; 
+	const newNumbers = [...numbers,4];
+	console.log(newNumbers);
+
+	//Object
+	const person = {
+	  name: 'Max'
+	}
+	const newPerson = {
+	  ...person,
+	  age: 28
+	}
+	console.log(newPerson);
+----------------------------------------------------------------------------
+//Rest Operator - Used to merge a list of function arguments into an array
+const filterArray = (...args) => {
+  return args.filter(element => element === 1);
+}
+console.log(filterArray(1,2,3,4));
+----------------------------------------------------------------------------
+//Class
+class Human {
+  constructor() {
+    this.gender = 'Male';
+  }
+  printGender() {
+    console.log(this.gender);
+  }
+}
+
+//Inheritance and constructor
+class Human {
+  constructor() {
+    this.gender = 'Male'; //ES6
+  }
+  printGender() {
+    console.log(this.gender);
+  }
+}
+class Person extends Human {
+  constructor() {
+    super();
+    this.name = 'Max';
+  }
+  printMyName () {
+    console.log(this.name);
+  }
+}
+const person = new Person();
+person.printMyName();
+person.printGender();
+
+//Inheritance and without constructor
+class Human {
+  gender = 'Male'; //ES7
+  printGender() {
+    console.log(this.gender);
+  }
+}
+class Person extends Human {
+  name = 'Max';
+  printMyName () {
+    console.log(this.name);
+  }
+}
+const person = new Person();
+person.printMyName();
+person.printGender();
+
+//Inheritance, arrow functions
+class Human {
+  gender = 'Male'; //ES7
+  printGender = () => {
+    console.log(this.gender);
+  }
+}
+class Person extends Human {
+  name = 'Max';
+  printMyName = () => {
+    console.log(this.name);
+  }
+}
+const person = new Person();
+person.printMyName();
+person.printGender();
+------------------------------------------------------------------------------------------
+//Destructuring - Extracts array elements or object properties and store them in variables
