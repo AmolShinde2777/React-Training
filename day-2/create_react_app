@@ -1,0 +1,41 @@
+Create React App:
+
+Steps:
+1. Install node npm
+2. npm install -g create-react-app
+3. npm init react-app my-app
+
+For more details please visit below link:
+https://github.com/facebook/create-react-app
+
+Babel and Presets , Webpack -  we are using for budling code and convert ES6 to ES5
+
+manifest.json - used for progessive web apps/ gives metadata about our project
+
+registerServiceWorker.js - Used for progessive web apps and used to cache script files.
+
+Public -- > index.html starting of application
+
+index.js - Renders application on browser using React.Dom.render
+
+Working with Components:
+ReactDom.render(<h1>Test</h1>,document.getElementById('root'));
+one root component(App.js) - then nest your children components.
+
+Ways of defining components:
+1.class component
+2.functional component
+
+JSX:
+className - class
+
+why need to import react?
+React.createElement
+
+JSX restrictions:
+-JSX must have one root element
+
+
+“Props” is a special keyword in React, which stands for properties 
+and is being used for passing data from one component to another. 
+But the important part here is that data with props are being passed in a uni-directional flow.
