@@ -1,0 +1,28 @@
+State property will only be exists in class based component
+With react 16.8 - released react hooks which can be used in functinal component
+this.render will be called automatically
+Props or State change will lead to rerender dom.
+Props allow you to pass data from parent to child
+
+onclick - normal html and onclick - in jsx
+Handler is the convention to give event handler
+for example switchNameHandler -  arrow function
+to refer this to our class we are using arrow function
+dont pass parenthesis to the function - pass only reference
+
+switchNameHandler = () => {
+	console.log('was clicked');
+	this.state.persons[0].name = 'Saurabh';
+}
+
+above code give warning: - dont mutate state
+
+We should not mutate state, react will not recognize this change.
+
+Use setState method of component class
+
+Questions:
+1. can we pass our custom component in children props?
+2. can we change change for single element of array if we have array of elements inside state?
+
+
